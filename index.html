@@ -54,7 +54,7 @@
             color: var(--primary-color) !important;
         }
 
-          /* Update the home section to add proper top padding */
+        /* Update the home section to add proper top padding */
         .home-section {
             background: linear-gradient(135deg, #172a75 0%, #3b82f6 70%);
             color: white;
@@ -91,7 +91,7 @@
             margin-top: 20px;
         }
 
-      
+
 
         @keyframes pulse {
 
@@ -102,53 +102,6 @@
 
             50% {
                 transform: scale(1.05);
-            }
-        }
-
-        /* Responsive adjustments for the badge */
-        @media (max-width: 768px) {
-            .hero-badge {
-                font-size: 1.1rem;
-                padding: 10px 24px;
-                white-space: normal;
-                line-height: 1.3;
-                max-width: 95%;
-                margin-top: 15px;
-            }
-
-            .home-section {
-                padding: 70px 0 50px 0;
-                /* Reduced padding for mobile */
-            }
-        }
-
-        @media (max-width: 480px) {
-            .hero-badge {
-                font-size: 1rem;
-                padding: 8px 20px;
-                margin-bottom: 20px;
-                max-width: 98%;
-                margin-top: 35px;
-            }
-
-            .home-section {
-                padding: 90px 0 50px 0;
-                /* Further reduced for small screens */
-            }
-        }
-
-        @media (max-width: 360px) {
-            .hero-badge {
-                font-size: 0.9rem;
-                padding: 6px 16px;
-                white-space: normal;
-                line-height: 1.4;
-                margin-top: 5px;
-            }
-
-            .home-section {
-                padding: 85px 0 55px 0;
-                /* Minimal padding for very small screens */
             }
         }
 
@@ -355,7 +308,7 @@
             font-size: 2rem;
             font-weight: 700;
             text-align: center;
-            margin: 20px 0 40px 0;
+            margin: 20px 0 20px 0;
             color: var(--secondary-color);
         }
 
@@ -489,13 +442,14 @@
             .brand-feature-card {
                 width: 100%;
                 max-width: 400px;
-                margin-bottom: 30px;
+                margin-bottom: 1px;
             }
         }
 
         @media (max-width: 768px) {
             .home-section {
-                padding: 70px 0;
+                padding-top: 100px ;
+                padding-bottom: 15px;
             }
 
             .hero-title {
@@ -634,7 +588,7 @@
     <section id="brands" class="brands-section">
         <div class="container">
             <h2 class="brands-section-title">Our Premium Brand Partners</h2>
-            <p class="brands-section-subtitle">Strategic partnerships with premier surgical, medical device, and
+            <p class="brands-section-subtitle">Strategic partnerships with premier surgical, medical devices, and
                 pharmaceutical manufacturers enable us to provide healthcare facilities with superior quality
                 products.</p>
 
@@ -675,12 +629,10 @@
 
             <h3 class="brands-grid-title">Complete Brand Portfolio</h3>
             <div class="brands-grid">
-                <div class="brand-item">Flamingo</div>
                 <div class="brand-item">Acc-check</div>
                 <div class="brand-item">Dr. Morepen</div>
                 <div class="brand-item">Diamonds</div>
                 <div class="brand-item">Romsons</div>
-                <div class="brand-item">Johnson & Johnson</div>
                 <div class="brand-item">BPL</div>
                 <div class="brand-item">ONETOUCH</div>
                 <div class="brand-item">Beurer</div>
@@ -689,7 +641,7 @@
                 <div class="brand-item">Perfexa</div>
                 <div class="brand-item">Surgiwear</div>
                 <div class="brand-item">Hansaplast</div>
-                <div class="brand-item">Calcutta metallics</div>
+                <div class="brand-item">Flamingo</div>
                 <div class="brand-item">Boston Scientific</div>
                 <div class="brand-item">Olympus</div>
                 <div class="brand-item">GE Healthcare</div>
@@ -710,12 +662,14 @@
                 <div class="brand-item">Aishwarya</div>
                 <div class="brand-item">Jedux</div>
                 <div class="brand-item">Sachin</div>
+                <div class="brand-item">Johnson & Johnson</div>
+                <div class="brand-item">Calcutta metallics</div>
             </div>
         </div>
     </section>
 
     <!-- Products & Services Section -->
-    <section id="products" class="py-5">
+    <section id="products" class="py-4">
         <div class="container">
             <h2 class="section-title text-center">Products & Services</h2>
             <div class="row g-4">
