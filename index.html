@@ -555,6 +555,59 @@
             }
         }
 
+        /* Local SEO Content Styling */
+        .local-seo-content {
+            background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
+        }
+
+        .contact-info-item {
+            border-left: 3px solid var(--teal-accent);
+            padding-left: 15px;
+            margin-bottom: 1rem;
+        }
+
+        .contact-info-item a:hover {
+            color: var(--teal-accent) !important;
+            transition: color 0.3s ease;
+        }
+
+        .maps-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .maps-buttons .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(20, 184, 166, 0.4) !important;
+        }
+
+        .maps-buttons .btn:nth-child(2):hover {
+            background-color: var(--teal-accent) !important;
+            color: white !important;
+            border-color: var(--teal-accent) !important;
+        }
+
+        @media (max-width: 768px) {
+            .maps-buttons {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .maps-buttons .btn {
+                width: 100%;
+                text-align: center;
+                margin: 0 0 10px 0 !important;
+            }
+
+            .contact-info-item {
+                border-left: 2px solid var(--teal-accent);
+                padding-left: 12px;
+            }
+        }
+
+
 
         /* Medical Stats */
         .medical-stats {
@@ -748,18 +801,293 @@
             font-size: 1.2rem;
         }
 
+        /* Enhanced WhatsApp Connect Card */
         .whatsapp-connect-card {
-            background: linear-gradient(120deg, var(--whatsapp-color), #128c7e);
-            color: #fff;
-            border-radius: 14px;
-            padding: 2rem 1.5rem;
-            text-align: center;
-            box-shadow: 0 8px 32px rgba(37, 211, 102, .19);
+            background: linear-gradient(135deg, var(--whatsapp-color) 0%, #128c7e 100%);
+            border-radius: 20px;
+            padding: 2.5rem 2rem;
+            color: white;
+            box-shadow: 0 15px 40px rgba(37, 211, 102, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .whatsapp-connect-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+            animation: shimmer 3s ease-in-out infinite;
+        }
+
+        @keyframes shimmer {
+
+            0%,
+            100% {
+                opacity: 0;
+            }
+
+            50% {
+                opacity: 1;
+            }
+        }
+
+        /* Animated WhatsApp Icon */
+        .whatsapp-header {
+            position: relative;
+            z-index: 2;
+        }
+
+        .whatsapp-icon-container {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 1rem;
         }
 
         .whatsapp-icon-large {
-            font-size: 2.5rem;
-            margin-bottom: .8rem;
+            font-size: 3.5rem;
+            position: relative;
+            z-index: 3;
+            animation: bounce 2s infinite;
+        }
+
+        .pulse-ring {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80px;
+            height: 80px;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            animation: pulse-ring 2s infinite;
+        }
+
+        @keyframes bounce {
+
+            0%,
+            20%,
+            50%,
+            80%,
+            100% {
+                transform: translateY(0);
+            }
+
+            40% {
+                transform: translateY(-10px);
+            }
+
+            60% {
+                transform: translateY(-5px);
+            }
+        }
+
+        @keyframes pulse-ring {
+            0% {
+                transform: translate(-50%, -50%) scale(0.8);
+                opacity: 1;
+            }
+
+            100% {
+                transform: translate(-50%, -50%) scale(1.2);
+                opacity: 0;
+            }
+        }
+
+        .whatsapp-title {
+            font-size: 2.2rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .whatsapp-subtitle {
+            font-size: 1.1rem;
+            opacity: 0.95;
+            line-height: 1.5;
+        }
+
+        /* Enhanced Buttons */
+        .whatsapp-btn {
+            display: flex;
+            align-items: center;
+            padding: 18px 24px;
+            border-radius: 15px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            width: 100%;
+            border: none;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .whatsapp-btn i {
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        .whatsapp-btn-primary {
+            background: rgba(255, 255, 255, 0.15);
+            color: white;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(10px);
+        }
+
+        .whatsapp-btn-primary:hover {
+            background: rgba(255, 255, 255, 0.25);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            color: white;
+        }
+
+        .whatsapp-btn-outline {
+            background: transparent;
+            color: white;
+            border: 2px solid rgba(255, 255, 255, 0.5);
+        }
+
+        .whatsapp-btn-outline:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-3px);
+            color: white;
+        }
+
+        .whatsapp-btn-emergency {
+            background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+            color: white;
+            border: 2px solid #fca5a5;
+            animation: pulse-emergency 2s infinite;
+        }
+
+        @keyframes pulse-emergency {
+
+            0%,
+            100% {
+                box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7);
+            }
+
+            50% {
+                box-shadow: 0 0 0 10px rgba(239, 68, 68, 0);
+            }
+        }
+
+        .whatsapp-btn-emergency:hover {
+            background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+            transform: translateY(-3px);
+            color: white;
+        }
+
+        .btn-title {
+            display: block;
+            font-size: 1.1rem;
+            font-weight: 700;
+        }
+
+        .btn-subtitle {
+            display: block;
+            font-size: 0.85rem;
+            opacity: 0.8;
+            font-weight: 400;
+        }
+
+        /* Emergency Section */
+        .emergency-section {
+            background: rgba(0, 0, 0, 0.1);
+            border-radius: 15px;
+            padding: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .emergency-badge {
+            background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+            color: #92400e;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 1rem;
+            animation: glow 2s infinite;
+        }
+
+        @keyframes glow {
+
+            0%,
+            100% {
+                box-shadow: 0 0 10px rgba(251, 191, 36, 0.5);
+            }
+
+            50% {
+                box-shadow: 0 0 20px rgba(251, 191, 36, 0.8);
+            }
+        }
+
+        /* Quick Features */
+        .quick-features {
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            padding-top: 1.5rem;
+        }
+
+        .feature-icon {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .quick-features small {
+            font-size: 0.85rem;
+            opacity: 0.9;
+            font-weight: 500;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .whatsapp-connect-card {
+                padding: 2rem 1.5rem;
+            }
+
+            .whatsapp-title {
+                font-size: 1.8rem;
+            }
+
+            .whatsapp-subtitle {
+                font-size: 1rem;
+            }
+
+            .whatsapp-btn {
+                padding: 15px 20px;
+                margin-bottom: 10px;
+            }
+
+            .btn-title {
+                font-size: 1rem;
+            }
+
+            .btn-subtitle {
+                font-size: 0.8rem;
+            }
+
+            .quick-features .col-4 {
+                margin-bottom: 1rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .whatsapp-icon-large {
+                font-size: 3rem;
+            }
+
+            .pulse-ring {
+                width: 70px;
+                height: 70px;
+            }
+
+            .emergency-section {
+                padding: 1rem;
+            }
         }
 
         .contact-section {
@@ -1107,14 +1435,15 @@
 
 
     <!-- 🔥 ADD THE NEW CONTENT HERE ↓ -->
-    <section class="local-seo-content py-5 bg-light">
+    <section class="local-seo-content py-5 bg-light" id="contact">
         <div class="container">
             <h2 class="text-center mb-4" style="color: var(--secondary-color); font-weight: 700;">Trusted Surgical Shop
                 in Shahganj, Uttar Pradesh</h2>
             <p class="text-center mb-5" style="font-size: 1.1rem; max-width: 800px; margin: 0 auto;">Standard Medical
                 Agency is the leading surgical shop in Shahganj, serving hospitals, clinics, and healthcare
-                professionals across Uttar Pradesh. Located in SARA COMPLEX - shahganj near by Amina hospital, we are your trusted
-                partner for quality surgical items, critical injectables, Fuilds and medical equipment.</p>
+                professionals across Uttar Pradesh. Located in SARA COMPLEX - shahganj near by Amina hospital, we are
+                your trusted
+                partner for quality surgical items, critical injectables, Fluids and medical equipment.</p>
 
             <div class="row">
                 <div class="col-lg-6 mb-4">
@@ -1122,7 +1451,9 @@
                     </h3>
                     <ul class="list-unstyled" style="font-size: 1.1rem;">
                         <li class="mb-2">✅ Largest surgical collection in Shahganj</li>
-                        <li class="mb-2">✅ Authorized dealer for Neon, Tynor, Themis, Healthium, Accu-check, Suture India</li>
+                        <li class="mb-2">✅ Authorized dealer for Neon, Tynor, Themis, Healthium, Accu-check, Suture,
+                            Wheelchair available in all brands
+                        </li>
                         <li class="mb-2">✅ Same-day delivery across Shahganj and nearby areas</li>
                         <li class="mb-2">✅ 24/7 emergency surgical supplies availability</li>
                         <li class="mb-2">✅ Serving 500+ hospitals and clinics in UP</li>
@@ -1131,20 +1462,150 @@
 
                 <div class="col-lg-6 mb-4">
                     <h3 style="color: var(--primary-color); font-weight: 700;">Our Surgical Shop Location</h3>
-                    <div style="font-size: 1.1rem;">
-                        <p><strong>Address:</strong> SARA COMPLEX, GHAAS MANDI ROAD, near Fateh Hospital, Purani Bazar,
-                            Shahganj, Uttar Pradesh 223101</p>
-                        <p><strong>Contact:</strong> +91-9839122888 | Emergency: +91-9044417830</p>
-                        <p><strong>Hours:</strong> Monday-Wednesday, Friday-Sunday: 10:30 AM - 7:30 PM</p>
+
+                    <div class="contact-info-item mb-3">
+                        <p><strong><i class="bi bi-geo-alt me-2"
+                                    style="color: var(--teal-accent);"></i>Address:</strong></p>
+                        <a href="https://maps.app.goo.gl/SXet2ugHDoAi9p7a9?g_st=ipc" target="_blank"
+                            style="color: var(--primary-color); text-decoration: none; margin-left: 25px; display: block; font-size: 1.1rem; line-height: 1.5;">
+                            SARA COMPLEX, GHAAS MANDI ROAD, near Fateh Hospital, Purani Bazar, Shahganj, Uttar Pradesh
+                            223101
+                        </a>
+                    </div>
+
+                    <div class="contact-info-item mb-3">
+                        <p style="font-size: 1.1rem;"><strong><i class="bi bi-telephone me-2"
+                                    style="color: var(--teal-accent);"></i>Contact:</strong>
+                            <a href="tel:+919839122888"
+                                style="color: var(--primary-color); text-decoration: none;">+91-9839122888</a> |
+                            Enquiry/Order updates: <a href="tel:+919044417830"
+                                style="color: var(--primary-color); text-decoration: none;">+91-9044417830</a>
+                        </p>
+                    </div>
+
+                    <div class="contact-info-item mb-4">
+                        <p style="font-size: 1.1rem;"><strong><i class="bi bi-clock me-2"
+                                    style="color: var(--teal-accent);"></i>Hours:</strong>
+                            Monday-Wednesday, Friday-Sunday: 10:30 AM - 7:30 PM
+                        </p>
+                    </div>
+
+                    <!-- Google Maps Action Buttons -->
+                    <div class="maps-buttons">
+                        <a href="https://maps.app.goo.gl/SXet2ugHDoAi9p7a9?g_st=ipc" target="_blank"
+                            class="btn me-3 mb-2"
+                            style="background: linear-gradient(135deg, var(--teal-accent) 0%, #0d9488 100%); color: white; border: none; padding: 12px 24px; border-radius: 25px; font-weight: 600; box-shadow: 0 4px 15px rgba(20, 184, 166, 0.3);">
+                            <i class="bi bi-geo-alt me-2"></i>Get Directions
+                        </a>
+                        <a href="https://maps.google.com/?q=STANDARD MEDICAL AGENCY, SARA COMPLEX, GHAAS MANDI ROAD, near Fateh Hospital, Purani Bazar, Shahganj, Uttar Pradesh 223101"
+                            target="_blank" class="btn mb-2"
+                            style="border: 2px solid var(--teal-accent); color: var(--teal-accent); background: transparent; padding: 12px 24px; border-radius: 25px; font-weight: 600; text-decoration: none; transition: all 0.3s ease;">
+                            <i class="bi bi-map me-2"></i>View on Map
+                        </a>
                     </div>
                 </div>
             </div>
+
+            <div class="row mt-4">
+                <div class="col-lg-10 mx-auto">
+                    <div class="whatsapp-connect-card">
+                        <!-- Header Section with Animated Icon -->
+                        <div class="whatsapp-header text-center mb-4">
+                            <div class="whatsapp-icon-container">
+                                <i class="bi bi-whatsapp whatsapp-icon-large"></i>
+                                <div class="pulse-ring"></div>
+                            </div>
+                            <h3 class="whatsapp-title">Connect with Us on WhatsApp</h3>
+                            <p class="whatsapp-subtitle">🚀 Get INSTANT quotes, check stock availability, and place
+                                orders in seconds! Our experts are available 24/7 to guide you.</p>
+                        </div>
+
+                        <!-- Enhanced Action Buttons -->
+                        <div class="whatsapp-actions">
+                            <!-- Main Contact Buttons -->
+                            <div class="row g-3 mb-4">
+                                <div class="col-md-6">
+                                    <a href="https://wa.me/9839122888?text=Hello!%20I%27m%20a%20healthcare%20professional%20looking%20for%20information%20about%20your%20surgical%20items.%20Could%20you%20please%20share%20details%20about%20your%20product%20catalog%2C%20quality%20certifications%2C%20and%20pricing%3F%20Thank%20you."
+                                        target="_blank" class="whatsapp-btn whatsapp-btn-primary">
+                                        <i class="bi bi-chat-dots me-2"></i>
+                                        <div>
+                                            <span class="btn-title">General Inquiry</span>
+                                            <small class="btn-subtitle">Product info & pricing</small>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-md-6">
+                                    <a href="https://wa.me/9839122888?text=Hello!%20I%20would%20like%20to%20place%20an%20order%20for%20surgical%20items.%20Please%20share%20your%20current%20catalog%20and%20pricing%20information.%20I%27m%20particularly%20interested%20in%20high-quality%20surgical%20tools%20for%20our%20medical%20facility."
+                                        target="_blank" class="whatsapp-btn whatsapp-btn-primary">
+                                        <i class="bi bi-cart-plus me-2"></i>
+                                        <div>
+                                            <span class="btn-title">Place Order</span>
+                                            <small class="btn-subtitle">Quick order placement</small>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!-- Emergency & Support Section -->
+                            <div class="emergency-section">
+                                <div class="emergency-badge">
+                                    <i class="bi bi-lightning-charge me-1"></i>
+                                    Emergency Support Available 24/7
+                                </div>
+
+                                <div class="row g-3 mt-2">
+                                    <div class="col-md-6">
+                                        <a href="https://wa.me/9044417830?text=Hello!%20I%20need%20technical%20support%20regarding%20surgical%20items.%20Could%20you%20please%20assist%20me%20with%20product%20specifications%2C%20usage%20guidelines%2C%20and%20maintenance%20instructions%3F"
+                                            target="_blank" class="whatsapp-btn whatsapp-btn-outline">
+                                            <i class="bi bi-headset me-2"></i>
+                                            <div>
+                                                <span class="btn-title">Technical Support</span>
+                                                <small class="btn-subtitle">Product specifications</small>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <a href="https://wa.me/9839122888?text=URGENT!%20I%20need%20immediate%20surgical%20supplies%20for%20emergency.%20Please%20contact%20me%20ASAP."
+                                            target="_blank" class="whatsapp-btn whatsapp-btn-emergency">
+                                            <i class="bi bi-exclamation-triangle me-2"></i>
+                                            <div>
+                                                <span class="btn-title">Emergency Order</span>
+                                                <small class="btn-subtitle">Urgent supplies needed</small>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Quick Features -->
+                            <div class="quick-features mt-4">
+                                <div class="row text-center">
+                                    <div class="col-4">
+                                        <div class="feature-icon">⚡</div>
+                                        <small>Instant Response</small>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="feature-icon">📋</div>
+                                        <small>Live Inventory</small>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="feature-icon">🚚</div>
+                                        <small>Same Day Delivery</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </section>
+
     <!-- ↑ END OF NEW CONTENT -->
 
     <!-- Contact Section -->
-    <section id="contact" class="contact-section">
+    <!-- <section id="contact" class="contact-section">
         <div class="container">
             <h2 class="section-title text-center">Contact Information</h2>
             <div class="row">
@@ -1224,7 +1685,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <!-- Footer -->
     <footer class="bg-dark text-light py-4">
